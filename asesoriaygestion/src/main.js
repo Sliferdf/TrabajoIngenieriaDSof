@@ -24,7 +24,7 @@ const firebaseConfig = {
   appId: "1:28025408729:web:00c924f378d799864182c8"
 };
 
-Vue.use(VueFirebase, {firebase: firebase, config: FBCONFIG});
+Vue.use(VueFirebase, {firebase: firebase, config: firebaseConfig});
 
 Vue.config.productionTip = false
 
