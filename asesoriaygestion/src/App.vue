@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Principal</router-link> |
-      <router-link to="/login">Login</router-link>
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/buscar">Buscar mi trámite</router-link>
     </div>
     <router-view/>
   </div>

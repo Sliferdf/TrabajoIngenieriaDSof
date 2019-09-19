@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import login from '@/components/Login'
+import buscar from '@/components/Buscar'
+import forms from '@/views/forms/forms'
 
 Vue.use(Router)
 
@@ -15,8 +17,21 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: login
+      component: login,
+      meta: {
+        requiresGuest: true
+      }
     },
+    {
+      path: '/buscar',
+      name: 'buscar',
+      component: buscar
+    },
+{ 
+          path: '/forms',
+            name: 'forms',
+            component: forms
+          },
     {
       path: '/about',
       name: 'about',
