@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import * as firebase from "firebase";       
-import VueFirebase from 'vue-firebase'
+import VueFirebase from 'vue-firebase';
 
 // Config firebase project
 const firebaseConfig = {
@@ -27,6 +27,14 @@ const firebaseConfig = {
 Vue.use(VueFirebase, {firebase: firebase, config: firebaseConfig});
 
 Vue.config.productionTip = false
+
+import AlertIcon from 'vue-ionicons/dist/ios-alert.vue'
+
+Vue.component('alert-icon', AlertIcon)
+
+import AllIosIcon from 'vue-ionicons/dist/ionicons-ios.js'
+ 
+Vue.use(AllIosIcon)
 
 new Vue({
   router,

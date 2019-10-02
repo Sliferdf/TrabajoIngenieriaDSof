@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import login from '@/components/Login'
 import buscar from '@/components/Buscar'
+import Plantilla from '@/components/Plantilla'
 
 Vue.use(Router)
 
@@ -26,6 +27,14 @@ export default new Router({
       name: 'buscar',
       component: buscar
     },
+
+    {
+      path: '/Plantilla',
+      name: 'plantilla',
+      component: Plantilla
+    },
+
+
     {
       path: '/about',
       name: 'about',

@@ -154,7 +154,7 @@ export default {
 }
 
 #menu a:hover {
-    color: rgba(158, 25, 25, 0.493);
+    color: rgba(146, 0, 0, 0.493);
 }
 
 #slider {
