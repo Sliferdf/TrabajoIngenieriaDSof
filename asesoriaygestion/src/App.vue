@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Principal</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/buscar">Buscar mi trámite</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
@@ -15,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #221515;
 }
 #nav {
   padding: 30px;
@@ -27,6 +22,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #da2923;
 }
 </style>

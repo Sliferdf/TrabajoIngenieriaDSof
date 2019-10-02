@@ -1,5 +1,11 @@
 <template>
+
 <div class="wrapper fadeInDown">
+    <div id="nav">
+      <router-link to="/">Principal</router-link> |
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/buscar">Buscar mi trámite</router-link>
+    </div>
   <div id="formContent">
     <!-- Tabs Titles -->
 
@@ -26,9 +32,6 @@ export default {
 <style>
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -107,7 +110,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #fb6161;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -129,7 +132,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: black;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {

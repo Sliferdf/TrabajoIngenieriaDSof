@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import login from '@/components/Login'
 import buscar from '@/components/Buscar'
-import forms from '@/views/forms/forms'
 
 Vue.use(Router)
 
@@ -27,11 +26,6 @@ export default new Router({
       name: 'buscar',
       component: buscar
     },
-{ 
-          path: '/forms',
-            name: 'forms',
-            component: forms
-          },
     {
       path: '/about',
       name: 'about',
