@@ -45,7 +45,7 @@ export default {
         .then(
           user => {
             alert(`You are logged in as ${user.email}`);
-            this.$router.push('home');
+            this.$router.push('plantilla');
           },
           err => {
             alert(err.message);
@@ -55,6 +55,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style src="../css/style.css"></style>
