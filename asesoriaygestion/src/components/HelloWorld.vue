@@ -57,7 +57,8 @@
     <footer id="footer">
         <div class="center">
             <p>
-                &copy; Proyecto ingeniería de sofware por: Duban Alexis Echavarria Restrepo-Yonny Cuesta
+                &copy; Proyecto ingeniería de software por: 
+                Alexis Echavarria -Yonny Cuesta
             </p>
         </div>
     </footer>

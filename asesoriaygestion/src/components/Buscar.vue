@@ -39,14 +39,16 @@
       </tr>
     </tbody>
   </table>
+
+  
 </div>
+
+
 </template>
 
 <script>
 
 import firebase from 'firebase';
-
-
 
 export default {
     name: 'login',
@@ -61,10 +63,17 @@ let firebaseAppDefined = false
    if ( ! firebaseAppDefined) {
      if ( firebase . app ()) {
        // Tu código aquí
+        let condicion= document.getElementById('login').value;
         var db = firebase.firestore();
         var tabla=document.getElementById('tabla');
 
-        db.collection("Tramites").where("consecutivo", "==", 123456).get().then((querySnapshot) => {
+        console.log(condicion);
+
+        db.collection("Tramites")
+        .where("consecutivo", "==", 123456)
+        .get()
+        .then((querySnapshot) => {
+
         tabla.innerHTML = ' ';
         querySnapshot.forEach((doc) => {
         tabla.innerHTML += `
@@ -79,7 +88,10 @@ let firebaseAppDefined = false
       </tr>
         `
     });
+}).catch((err) => {
+    console.log(err);
 });
+
        firebaseAppDefined = true
      }
    }

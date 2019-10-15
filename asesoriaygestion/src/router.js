@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import login from '@/components/Login'
 import buscar from '@/components/Buscar'
 import Plantilla from '@/components/Plantilla'
+import Formulario from '@/views/Formulario'
 
 Vue.use(Router)
 
@@ -34,7 +35,11 @@ export default new Router({
       component: Plantilla
     },
 
-
+    {
+      path: '/formulario',
+      name: 'formulario',
+      component: Formulario
+    },
     {
       path: '/about',
       name: 'about',
