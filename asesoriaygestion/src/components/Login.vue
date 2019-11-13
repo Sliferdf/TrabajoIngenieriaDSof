@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper fadeInDown">
     <div id="nav">
-      <router-link to="/">Principal</router-link> |
+      <router-link to="/home">Principal</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/buscar">Buscar mi trámite</router-link>
     </div>
@@ -45,7 +45,7 @@ export default {
         .then(
           user => {
             alert(`El usuario se encuentra registrado`);
-            this.$router.push('plantilla');
+            this.$router.push('ingreso');
           },
           err => {
             alert(err.message);

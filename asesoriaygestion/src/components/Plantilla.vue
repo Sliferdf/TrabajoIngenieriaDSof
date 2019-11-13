@@ -11,7 +11,7 @@
           class="brand-image img-circle elevation-3"
           style="opacity: .8"
         />
-        <span class="brand-text font-weight-light">Aplicacion</span>
+        <span class="brand-text font-weight-light">Cerrar sesión</span>
       </a>
 
       <!-- Sidebar -->

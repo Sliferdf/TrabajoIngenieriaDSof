@@ -2,7 +2,7 @@
 
 <div class="wrapper fadeInDown">
     <div id="nav">
-      <router-link to="/">Principal</router-link> |
+      <router-link to="/home">Principal</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/buscar">Buscar mi trámite</router-link>
     </div>
@@ -11,7 +11,7 @@
 
     <!-- Login Form -->
     <form @submit.prevent="Buscar">
-      <input type="numeric" id="login" class="fadeIn second" name="login" placeholder="Número de consecutivo">
+      <input v-model="buscar" type="numeric" id="login" class="fadeIn second" name="login" placeholder="Número de consecutivo">
       <input type="submit" class="fadeIn fourth" value="Buscar">
     </form>
   </div>
@@ -51,22 +51,25 @@
 <script>
 
 import firebase from 'firebase';
+import buscar from '../Busqueda';
 
 export default {
     name: 'login',
     data: function() {
-    return {};
+    return {
+      buscar: ''
+    };
      },
      methods: {
        Buscar(){
-let firebaseAppDefined = false
+    let firebaseAppDefined = false
 
- setInterval (() => {
+    setInterval (() => {
 
    if ( ! firebaseAppDefined) {
      if ( firebase . app ()) {
        // Tu código aquí
-        var condicion= document.getElementById('login').value;
+        var condicion= this.buscar;
         var db = firebase.firestore();
         var tabla=document.getElementById('tabla');
 
@@ -75,7 +78,7 @@ let firebaseAppDefined = false
         consulta.get()
         .then(function(doc) {
 
-              if (doc.exists) {
+        if (doc.exists) {
         console.log("Document data:", doc.data());
         tabla.innerHTML = ' ';
         tabla.innerHTML += `
@@ -102,7 +105,9 @@ let firebaseAppDefined = false
    }
  }, 100 ) 
      },
-} };
+} 
+   } 
+  
 
 </script>
 

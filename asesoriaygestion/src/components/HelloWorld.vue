@@ -11,7 +11,7 @@
             <nav id="menu">
                 <ul>
                     <li>
-                        <router-link to="/">Principal</router-link> |
+                        <router-link to="/home">Principal</router-link> |
                     </li>
                     <li>
                         <router-link to="/login">Login</router-link> |

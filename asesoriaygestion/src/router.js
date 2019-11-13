@@ -5,23 +5,30 @@ import login from '@/components/Login'
 import buscar from '@/components/Buscar'
 import Plantilla from '@/components/Plantilla'
 import Formulario from '@/views/Formulario'
+import firebase from 'firebase'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '*',
+      redirect : '/login'
+    },
+
+   {
+     path: '/',
+    redirect: 'login'
+   },
+    {
+      path: '/home',
       name: 'home',
       component: Home
     },
     {
       path: '/login',
       name: 'login',
-      component: login,
-      meta: {
-        requiresGuest: true
-      }
+      component: login
     },
     {
       path: '/buscar',
@@ -30,9 +37,12 @@ export default new Router({
     },
 
     {
-      path: '/Plantilla',
-      name: 'plantilla',
-      component: Plantilla
+      path: '/ingreso',
+      name: 'ingreso',
+      component: Plantilla,
+      meta: {
+        autentificado: true
+      }
     },
 
     {
@@ -40,13 +50,22 @@ export default new Router({
       name: 'formulario',
       component: Formulario
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
   ]
 })
+/*
+router.beforeEach((to, from, next) => {
+  let usuario = firebase.auth().currentUser;
+  let autorizacion = to.matched.some(record => record.meta.autentificado);
+  
+  
+  if (autorizacion && usuario) {
+    next('imgreso')
+  
+  } else if (!autorizacion && usuario) {
+    next('home');
+ 
+  } else {
+    next();
+  }
+})
+*/
