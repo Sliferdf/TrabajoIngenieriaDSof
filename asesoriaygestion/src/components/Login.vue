@@ -44,7 +44,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
-            alert(`You are logged in as ${user.email}`);
+            alert(`El usuario se encuentra registrado`);
             this.$router.push('plantilla');
           },
           err => {

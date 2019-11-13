@@ -26,7 +26,7 @@
             />
           </div>
           <div class="info">
-            <a href="#" class="d-block">Usuario</a>
+            <a href="#" class="d-block">Administrador</a>
           </div>
         </div>
 
